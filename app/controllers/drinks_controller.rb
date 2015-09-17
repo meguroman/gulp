@@ -1,6 +1,7 @@
 class DrinksController < ApplicationController
   def home
-    @today = Date.today
+    #@today = Date.today
+    @today = Time.zone.now
 
     # 本日のデータを取得
     from  = Time.now.at_beginning_of_day
