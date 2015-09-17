@@ -1,21 +1,45 @@
-<p class="lead">gulp 2000 &#13206; water!</p>
-<p><%= @today.strftime('%Y') %>年</p>
-<p><%= @today.strftime('%m月%d日（%a）') %></p>
-<p>本日</p>
-<p><%= @todays_qty %>杯 / <%= @todays_amount %> &#13206;</p>
-<p>あと</p>
-<p>およそ <%= @todays_rest %> 杯</p>
-<table class="table">
-<% @todays_data.each do |drink| %>
-  <tr>
-    <td><%= drink.id %></td>
-    <td><%= drink.water %></td>
-    <td><%= drink.created_at %></td>
-  </tr>
-<% end %>
-</table>
-<%= form_for @drink_new do |f| %>
-  <%= f.label :water, "water" %>
-  <%= f.text_field :water %>
-  <%= f.submit "gulp" %>
-<% end %>
+<div class="container">
+  <div class="center">
+    <p class="lead">gulp water 2000 &#13206; a day.</p>
+  </div>
+  <p><%= @today.strftime('%Y年 %m月 %d日 ( %a )') %></p>
+  <p>本日</p>
+  <div class="center">
+    <h2><%= @todays_qty %>杯 / <%= @todays_amount %> &#13206;</h2>
+  </div>
+  <p>あと</p>
+  <div class="center">
+    <h2>およそ <%= @todays_rest %> 杯</h2>
+  </div>
+  <div id="form_container">
+    <%= form_for @drink_new do |f| %>
+      <div class="input-group">
+        <%= f.text_field :water, size: "200", class: "form-control", value: 350 %>
+        <span class="input-group-btn">
+          <%= f.submit "gulp", class: "btn btn-danger" %>
+        </span>
+      </div>
+    <% end %>
+  </div>
+  <div id="gulp_list">
+    <div class="panel panel-default">
+      <div class="panel-heading">今日のgulp</div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>&#13206;</th>
+            <th>飲んだ時間</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @todays_data.each do |drink| %>
+            <tr>
+              <td><%= drink.water %></td>
+              <td><%= drink.created_at.strftime('%p %I時%M分') %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

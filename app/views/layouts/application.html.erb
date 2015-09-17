@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+  <!--
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -25,12 +26,16 @@
           <li><a href="#">Result</a></li>
           <li><a href="#">Settings</a></li>
         </ul>
-      </div><!--/.nav-collapse -->
+      </div>
     </div>
   </div>
+  -->
+  <div id="logo"><%= image_tag 'gulp_logo.jpg' %></div>
   <div class="container">
     <%= yield %>
-    <%= debug(params) if Rails.env.development? %>
+    <div id="debug_box">
+      <%= debug(params) if Rails.env.development? %>
+    </div>
   </div><!-- /.container -->
 </body>
 </html>

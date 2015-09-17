@@ -1,3 +1,33 @@
 body {
-    padding-top: 50px;;
+    background-color: #00D5E7;
+    color: #FFF;
+}
+
+#debug_box {
+    margin-top: 20px;
+}
+
+#logo {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0;
+
+    img {
+        width: 80%;
+        max-width: 717px;
+    }
+}
+
+#gulp_list {
+    margin-top: 30px;
+    color: #232323;
+}
+
+.center {
+    text-align: center;
+}
+
+#form_container {
+    width: 50%;
+    margin: 30px auto;
 }
