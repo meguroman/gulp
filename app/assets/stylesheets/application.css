@@ -10,5 +10,8 @@
  *
  *= require_self
  *= require bootstrap
+ *= roboto
+ *= material-fullpalette
+ *= ripples
  *= require_tree .
  */

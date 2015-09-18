@@ -1,9 +1,28 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ *= roboto
+ *= material-fullpalette
+ *= ripples
+
+ */
+
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -6798,3 +6817,42 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+/* line 1, /Users/meguroman/GoogleDrive/Development/Ruby/gulp/app/assets/stylesheets/custom.css.scss */
+body {
+  background-color: #00D5E7;
+  color: #FFF;
+}
+
+/* line 6, /Users/meguroman/GoogleDrive/Development/Ruby/gulp/app/assets/stylesheets/custom.css.scss */
+#debug_box {
+  margin-top: 20px;
+}
+
+/* line 10, /Users/meguroman/GoogleDrive/Development/Ruby/gulp/app/assets/stylesheets/custom.css.scss */
+#logo {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+/* line 15, /Users/meguroman/GoogleDrive/Development/Ruby/gulp/app/assets/stylesheets/custom.css.scss */
+#logo img {
+  width: 80%;
+  max-width: 717px;
+}
+
+/* line 21, /Users/meguroman/GoogleDrive/Development/Ruby/gulp/app/assets/stylesheets/custom.css.scss */
+#gulp_list {
+  margin-top: 30px;
+  color: #232323;
+}
+
+/* line 26, /Users/meguroman/GoogleDrive/Development/Ruby/gulp/app/assets/stylesheets/custom.css.scss */
+.center {
+  text-align: center;
+}
+
+/* line 30, /Users/meguroman/GoogleDrive/Development/Ruby/gulp/app/assets/stylesheets/custom.css.scss */
+#form_container {
+  width: 50%;
+  margin: 30px auto;
+}
